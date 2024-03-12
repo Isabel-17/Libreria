@@ -1,0 +1,36 @@
+select {
+    font-size: 13px;
+    padding: 5px 30px 5px 10px; 
+    appearance: none;
+    border: 1px solid #afaeae;
+    border-radius: 5px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="white"><path d="M5 7l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1px center;
+    background-size: 30px;
+    position: relative;
+    z-index: 1;
+}
+.container {
+    display: block;
+    flex-direction: column;
+    position: relative;
+    right: -390px;
+    top: -175px;
+}
+p{
+    display: flex;
+    position: relative;
+    color: aliceblue;
+    font-size: 25px;
+}
+.opciones {
+    background-color: black;
+    color: white;
+    font-family: 'Shadows Into Light',cursive;
+    font-size: 15px;
+    border-radius: 0;
+    top: -19px;
+    width: 11rem;
+    height: 1.8rem;
+}

@@ -1,0 +1,8 @@
+.title {
+    display: flex;
+    position: relative;
+    bottom: 5rem;    
+    color: rgb(2, 108, 201);
+    right: -43px;
+    font-size: 24px;
+}

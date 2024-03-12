@@ -1,0 +1,16 @@
+.list-contanier {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    gap: 10px;
+}
+.list {
+    display: flex;
+    position: relative;
+    top: -170px;
+    left: 46px;
+
+}
+
+.image {
+    width: 150px;
+}
