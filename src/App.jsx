@@ -13,9 +13,9 @@ function App() {
   return (
     <> 
       <Counter/>
-      <BooksAvailable />
       <ReadingList/> 
       <Provider>
+        <BooksAvailable total={filteredList.length}/>
         <FilterRange setFilteredList={setFilteredList}/>     
         <BooksGender  setFilteredList={setFilteredList}/>
         <List list={filteredList}/>

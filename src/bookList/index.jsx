@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import './bookList.css';
-import { dataContext } from "../Provider";
 
 function List ({ list }) {
 

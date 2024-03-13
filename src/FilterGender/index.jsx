@@ -3,19 +3,19 @@ import './BookGender.css';
 import { dataContext } from "../Provider";
 
 function BooksGender ({setFilteredList}) {
-    const {genres} = useContext(dataContext);
+    const {listBooks} = useContext(dataContext);
     const [filtered, setFiltered] = useState(null);
     const [uniqueGenres, setUniqueGenres] = useState([]);
 
     useEffect(() => {
-        const uniqueSet = new Set(genres.map(book => book.genre));
+        const uniqueSet = new Set(listBooks.map(book => book.genre));
         setUniqueGenres(Array.from(uniqueSet));
-    }, [genres]);
+    }, [listBooks]);
 
     const handelAction = (e) => {
         const selectedGenre = e.target.value;
         setFiltered(selectedGenre);
-        const filteredList = genres.filter((book) => !selectedGenre || book.genre === selectedGenre);
+        const filteredList = listBooks.filter((book) => !selectedGenre || book.genre === selectedGenre);
         setFilteredList(filteredList);
     }
     
