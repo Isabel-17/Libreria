@@ -1,10 +1,10 @@
 import React from "react";
 import './BooksAvailable.css'
 
-function BooksAvailable () {
+function BooksAvailable ({total}) {
     return (
         <div className="available">
-            <h1>6 libros disponibles</h1>
+            <h1> {total} libros disponibles</h1>
         </div>
     )
 }

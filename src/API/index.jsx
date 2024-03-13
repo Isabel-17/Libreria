@@ -1,4 +1,3 @@
-import React from "react";
 const API = "https://todo-para-isa.zeabur.app/v1/books"
 
 async function GetApi () {

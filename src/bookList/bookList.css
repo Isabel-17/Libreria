@@ -1,14 +1,13 @@
 .list-contanier {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 220px);
-    gap: 10px;
-}
-.list {
-    display: flex;
+    display: block;
     position: relative;
     top: -170px;
     left: 46px;
-
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    gap: 10px;
 }
 
 .image {

@@ -10,27 +10,28 @@ select {
     background-size: 30px;
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 .container {
     display: block;
     flex-direction: column;
     position: relative;
     right: -390px;
-    top: -175px;
+    top: -170px;
 }
 p{
     display: flex;
     position: relative;
     color: aliceblue;
-    font-size: 25px;
+    font-size: 24px;
 }
 .opciones {
     background-color: black;
-    color: white;
+    color: rgb(253, 253, 253);
     font-family: 'Shadows Into Light',cursive;
-    font-size: 15px;
+    font-size: 14px;
     border-radius: 0;
     top: -19px;
-    width: 11rem;
+    width: 14rem;
     height: 1.8rem;
 }

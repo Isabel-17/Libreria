@@ -1,28 +1,20 @@
-import React from "react";
-import {useEffect, useState} from "react";
-import { GetApi } from "../API";
+import React, { useContext } from "react";
 import './bookList.css';
+import { dataContext } from "../Provider";
 
 function List () {
-    const [book, setBook] = useState([]);
+    const {listBooks} = useContext(dataContext)
 
-    useEffect (() => {
-        getBook();
-    }, []);
-
-    const getBook = async () =>  {
-        const api = await GetApi()
-        setBook(api)
-    }
     return (
         <div className="list-contanier">
-            {book.map((books) =>(
-                <ul className="list">
-                    <li className="list-book">
-                        <img className="image" src={books.cover}/>
-                    </li>
-                </ul>
-            ))}
+            <div className="list">
+                {listBooks.map((books) =>(
+                    <img  
+                    key={books._id}
+                    className="image list-book" 
+                    src={books.cover}/>
+                ))}
+            </div>
         </div>
     )
 }
