@@ -17,21 +17,24 @@ select {
     flex-direction: column;
     position: relative;
     right: -390px;
-    top: -170px;
+    top: -185px;
 }
 p{
     display: flex;
     position: relative;
     color: aliceblue;
-    font-size: 24px;
+    font-size: 28px;
 }
 .opciones {
     background-color: black;
-    color: rgb(253, 253, 253);
+    color: rgb(255, 255, 255);
     font-family: 'Shadows Into Light',cursive;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 0;
     top: -19px;
     width: 14rem;
-    height: 1.8rem;
+}
+.title-genre{
+    font-size: 17px;
+    color: rgb(252, 252, 252);
 }

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { createContext } from "react";
 import { GetApi } from "../API";
 
-
 const dataContext = createContext();
 
 function Provider({children}) {
+ 
     const [listBooks, setListBooks] = useState([]);
     const [genres, setGenres ] = useState([]);
 
@@ -20,7 +20,9 @@ function Provider({children}) {
     }
 
     return (
-      <dataContext.Provider value={{listBooks, genres
+      <dataContext.Provider value={{
+        listBooks, 
+        genres,
       }}>
         {children}
       </dataContext.Provider>

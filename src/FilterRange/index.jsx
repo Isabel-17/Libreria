@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { GetApi } from "../API";
+import React, { useEffect, useState, useContext } from "react";
 import './FilterRange.css';
+import { dataContext } from "../Provider";
 
-const BooksPages = () =>  {
+const FilterRange = ( {setFilteredList} ) =>  {
+    const {listBooks} = useContext(dataContext)
+    const [click, setClick] = useState(0);
 
-    const [click, setClick] = useState();
+    useEffect(() => {
+        setFilteredList(listBooks);
+    }, [listBooks, setFilteredList]);
+
 
     const handelClick = (e) => {
-        setClick(e.target.value)
-        console.log(e.target.value);
+        setClick(e.target.value);
+        const filteredList =  listBooks.filter((book) => !click || book.pages >= click);
+        setFilteredList(filteredList);
     }
-
 
     return (
         <>
@@ -18,21 +23,15 @@ const BooksPages = () =>  {
                 <p className="range_title">Filtrar  páginas</p>
                 <input className="range" 
                     type="range"
-                    min={200} 
-                    max={1500} 
-                    value={click}
-                    onChange={(handelClick)}
+                    min={0} 
+                    max={1201} 
+                    onChange={handelClick}
                 >
                 </input>
-{/* 
-                <ul>
-                    {books.filter((book) => book.pages === parseInt(amountPages)).map((book) => (
-                        <li key={book._id}>{book.title} - {book.pages} páginas </li>
-                    ))}
-                </ul> */}
             </div>
         </>
     );
 }
 
-export { BooksPages};
+export { FilterRange};
+
