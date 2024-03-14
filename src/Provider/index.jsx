@@ -6,11 +6,9 @@ const dataContext = createContext();
 
 function Provider({children}) {
   const [listBooks, setListBooks] = useState([]);
-  const [genres, setGenres ] = useState([]);
 
-  const total = listBooks.length
-  console.log("total desd el provider",total);
-console.log(listBooks);
+  const total = listBooks.length;
+
     useEffect(() => {
       fetchApi();
     },[])
@@ -18,13 +16,11 @@ console.log(listBooks);
      const fetchApi = async () => {
         const result = await GetApi();
         setListBooks(Array.isArray(result) ? result : []);
-        setGenres(Array.isArray(result) ? result : [])
     }
 
     return (
       <dataContext.Provider value={{
         listBooks, 
-        genres,
         total
       }}>
         {children}
