@@ -4,21 +4,20 @@ import { dataContext } from "../Provider";
 
 function BooksGender ({setFilteredList}) {
     const {listBooks} = useContext(dataContext);
-    const [filtered, setFiltered] = useState(null);
     const [uniqueGenres, setUniqueGenres] = useState([]);
-
+    
     useEffect(() => {
-        const uniqueSet = new Set(listBooks.map(book => book.genre));
+        uniqueSet
         setUniqueGenres(Array.from(uniqueSet));
     }, [listBooks]);
+    
+    const uniqueSet = new Set(listBooks.map(book => book.genre));
 
     const handelAction = (e) => {
         const selectedGenre = e.target.value;
-        setFiltered(selectedGenre);
         const filteredList = listBooks.filter((book) => !selectedGenre || book.genre === selectedGenre);
         setFilteredList(filteredList);
     }
-    
     return (
         <>
             <div className="container">

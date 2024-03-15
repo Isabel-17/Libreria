@@ -1,7 +1,8 @@
 .list-contanier {
+    width: 70%;
     display: block;
     position: relative;
-    top: -170px;
+    top: -230px;
     left: 46px;
 }
 .list {
@@ -12,4 +13,8 @@
 
 .image {
     width: 150px;
+    cursor: pointer;
+}
+.selected {
+    opacity: 0.5;
 }

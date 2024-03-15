@@ -1,8 +1,8 @@
 .range_container {
     display: block;
     position: relative;
-    right: -110px;
-    top: -75px;
+    right: -130px;
+    top: -150px;
     flex-direction: column;
 }
 .range{

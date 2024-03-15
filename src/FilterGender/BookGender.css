@@ -1,5 +1,4 @@
 select {
-    font-size: 13px;
     padding: 5px 30px 5px 10px; 
     appearance: none;
     border: 1px solid #afaeae;
@@ -16,20 +15,21 @@ select {
     display: block;
     flex-direction: column;
     position: relative;
-    right: -390px;
-    top: -185px;
+    left: 27rem;
+    top: -270px;
 }
 p{
     display: flex;
     position: relative;
     color: aliceblue;
-    font-size: 28px;
+    font-size: 30px;
+
 }
 .opciones {
     background-color: black;
     color: rgb(255, 255, 255);
     font-family: 'Shadows Into Light',cursive;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 0;
     top: -19px;
     width: 14rem;

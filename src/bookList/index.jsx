@@ -1,20 +1,29 @@
 import React, { useContext } from "react";
+import { dataContext } from "../Provider";
 import './bookList.css';
 
-function List ({ list }) {
+function List ({filteredList}) {
+  const { addToReadingList } = useContext(dataContext);
 
-    return (
-        <div className="list-contanier">
-            <div className="list">
-                {list.map((books) =>(
-                    <img  
-                    key={books._id}
-                    className="image list-book" 
-                    src={books.cover}/>
-                ))}
-            </div>
-        </div>
-    )
+  const handleClick = (book) => {
+    if (!book.selected) { // Verifica si el libro no está seleccionado
+      addToReadingList(book);
+    }
+  }
+  return (
+    <div className="list-contanier">
+      <div className="list">
+        {filteredList.map((book) =>(
+          <img  
+            key={book._id}
+            className= {`image list-book ${book.selected ? 'selected' : ''}`} 
+            src={book.cover}
+            onClick={() => handleClick(book)}
+          />
+        ))}
+      </div>
+    </div>
+  )
 }
 
-export { List }
+export { List };
