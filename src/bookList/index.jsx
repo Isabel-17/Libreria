@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import { dataContext } from "../Provider";
 import './bookList.css';
 
@@ -6,7 +7,7 @@ function List ({filteredList}) {
   const { addToReadingList } = useContext(dataContext);
 
   const handleClick = (book) => {
-    if (!book.selected) { // Verifica si el libro no está seleccionado
+    if (!book.selected) { 
       addToReadingList(book);
     }
   }

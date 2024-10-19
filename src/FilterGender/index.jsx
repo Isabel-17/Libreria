@@ -1,4 +1,6 @@
-import React, { useContext, useState, useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
+import{ useContext, useState, useEffect } from "react";
 import './BookGender.css';
 import { dataContext } from "../Provider";
 
@@ -39,5 +41,4 @@ function BooksGender ({setFilteredList}) {
         </>
     )
 }
-
 export { BooksGender }

@@ -42,7 +42,7 @@
 .button {
   position: absolute; /* Posiciona el botón de forma absoluta dentro del contenedor */
   top: -12px; /* Coloca el botón en la parte superior del contenedor */
-  left: -18px; /* Coloca el botón en el lado izquierdo del contenedor */
+  left: -22px; /* Coloca el botón en el lado izquierdo del contenedor */
   z-index: 100;
   cursor: pointer;
   background-color: rgb(92, 92, 92);

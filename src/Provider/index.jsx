@@ -1,6 +1,8 @@
-import React, { useEffect, useState, createContext } from "react";
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react/prop-types */
+import { useEffect, useState, createContext } from "react";
 import { GetApi } from "../API";
-
+ 
 const dataContext = createContext();
 
 function Provider({children}) {

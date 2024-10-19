@@ -1,7 +1,7 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import './BooksAvailable.css'
 
-function BooksAvailable ({ total}) {
+function BooksAvailable ({ total }) {
     return (
         
         <div className="available">

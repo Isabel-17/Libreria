@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import './Counter.css';
 import { dataContext } from "../Provider";
 
